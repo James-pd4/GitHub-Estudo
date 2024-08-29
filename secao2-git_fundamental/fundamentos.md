@@ -33,3 +33,65 @@ git mv index.css css/index.css
 ```js
 git mv css/rodapre.css css/rodape.css
 ```
+
+# 2. Git Checkout
+
+Se você fez alterações em um arquivo, mas quer descartar essas mudanças e voltar ao estado do último commit, você pode usar git checkout:
+
+```bash
+git checkout -- nome-do-arquivo
+```
+
+**Exemplo:**
+
+Você tem o seguinte arquivo estilos.css:
+
+```css
+/* estilos.css */
+
+body {
+    background-color: white;
+}
+
+h1 {
+    color: black;
+}
+
+```
+Você então altera o arquivo para o seguinte:
+
+```css
+/* estilos.css */
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: yellow;
+}
+
+```
+
+Agora, você percebe que quer descartar essas alterações e voltar ao estado anterior do arquivo.
+
+**Passo a Passo:**
+1.Verificar o status do Git (opcional)
+2.Restaurar o arquivo usando git checkout:
+
+```bash
+git checkout -- estilos.css
+```
+3.Verificar o resultado:
+```css
+/* estilos.css */
+
+body {
+    background-color: white;
+}
+
+h1 {
+    color: black;
+}
+
+```
