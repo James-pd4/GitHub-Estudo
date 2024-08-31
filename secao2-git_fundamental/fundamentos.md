@@ -95,3 +95,29 @@ h1 {
 }
 
 ```
+
+
+# 3.Git reset --flag
+
+**1.Cenário de erro em um commit:**
+
+Você percebe que o último commit que fez tem um erro. Você ainda não compartilhou esse commit e decide que prefere desfazer completamente essa mudança ao invés de fazer um novo commit para corrigir
+
+```bash
+git reset --hard origin/master
+```
+
+**2.Cenário de experimentação:**
+
+Você fez várias modificações no código experimentalmente, mas agora quer descartar todas essas mudanças e voltar ao último commit estável.
+
+```bash
+git reset --hard origin/master
+```
+
+**3.Cenário de retornar a uma versão específica:**
+Você precisa voltar para um commit específico, porque depois dele várias mudanças foram feitas que você deseja ignorar.
+
+```bash
+git reset --hard origin/master
+```
